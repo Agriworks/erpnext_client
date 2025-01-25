@@ -45,3 +45,9 @@ print(f"Dataset schema: {schema}")
 - Synchronize and pull datasets from a specific index
 - Retrieve dataset schemas
 - Built-in session management
+
+
+# Items in Progress
+
+- Development a sync protocol to sync data from ERPNext to the client
+

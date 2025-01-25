@@ -2,8 +2,10 @@
 name = "csa-erp-client"
 version = "0.1.0"
 description = "A simple python client to access CSA ERP via ERPNext API"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Radhakrishna Sanka <rkrishnasanka@gmail.com>"]
 readme = "README.md"
+packages = [{ include = "erp_client" }]
+
 
 [tool.poetry.dependencies]
 python = ">=3.9,<4.0"
