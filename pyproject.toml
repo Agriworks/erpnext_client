@@ -11,6 +11,7 @@ packages = [{ include = "erp_client" }]
 python = ">=3.9,<4.0"
 requests = "^2.32.3"
 pandas = "^2.2.2"
+pymongo = "^4.11.1"
 
 
 [build-system]
