@@ -1,7 +1,9 @@
-import json
-import requests
-import pandas as pd
-from erp_client.erp_next_client import ERPNextClient
+import os
+from dotenv import load_dotenv
+from erp_client import ERPNextClient
+
+# Load environment variables from .env file
+load_dotenv()
 
 
 if __name__ == "__main__":
@@ -11,8 +13,13 @@ if __name__ == "__main__":
     - Query Reports (e.g. 'Stock Balance')
     """
     client = ERPNextClient(base_url="http://erp.csa-india.org")
-    username = "[EMAIL_ADDRESS]"
-    password = "[PASSWORD]"
+    username = os.getenv("ERPNEXT_USERNAME")
+    password = os.getenv("ERPNEXT_PASSWORD")
+
+    if not username or not password:
+        print("✗ Missing ERPNEXT_USERNAME or ERPNEXT_PASSWORD in .env file.")
+        print("  Please create a .env file based on .env.example with valid credentials.")
+        exit(1)
 
     errors = []
 
